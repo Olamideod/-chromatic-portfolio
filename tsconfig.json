@@ -22,8 +22,14 @@
     "paths": {
       "@tailwind/*": ["./src/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./"] // Include the root directory for type definitions
+    "typeRoots": ["./node_modules/@types", "./"], // Check if global.d.ts is located in the root directory
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "global.d.ts"], // Add global.d.ts to the include section
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "global.d.ts", // Ensure global.d.ts is included
+  ],
   "exclude": ["node_modules"]
 }
